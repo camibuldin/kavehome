@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Head from 'next/head';
 import "./globals.css";
 import styles from "./page.module.css";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Kave Home",
@@ -43,6 +44,7 @@ export default function RootLayout({
             </svg>
           </div>
           <div className={styles.navbar}>
+            <Link href={'/'}>
             <svg
               width="146"
               height="20"
@@ -58,6 +60,8 @@ export default function RootLayout({
                 />
               </g>
             </svg>
+            </Link>
+<Link href={'/favoritos'}>
             { "favoritos" ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -88,6 +92,8 @@ export default function RootLayout({
                 />
               </svg>
             )}
+</Link>
+
           </div>
         </header>
         {children}

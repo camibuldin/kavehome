@@ -19,12 +19,15 @@
   font-style: normal;
   font-weight: 600;
   line-height: 18px;
+cursor: pointer;
+
 }
 .navbar {
   padding: 16px 24px;
   background-color: #fff;
   display: flex;
   justify-content: space-between;
+  border-bottom: 1px solid #F0EFEB;
 }
 
 .onTopImgH1 {
@@ -48,7 +51,7 @@
   top: 85%;
   left: 44%;
 }
-.inspirateSection {
+.productsSection {
   padding: 0 90px;
 }
 .category {
@@ -63,6 +66,8 @@
   font-weight: 400;
   line-height: normal;
   text-decoration-line: underline;
+cursor: pointer;
+
 }
 .categoriesDiv {
   display: flex;
@@ -94,8 +99,85 @@
   height: 30px;
   text-decoration-line: underline;
   margin: 80px 10px;
-  padding: 10px;
+  padding: 10px 10px 15px;
   line-height: normal;
-  text-align: center;
+cursor: pointer;
 
+}
+.productArray{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.productContainer{
+  width: 385px;
+margin: 20px 16.5px;
+
+}
+.productDiv{
+  width: 385px;
+height: 267px;
+flex-shrink: 0;
+background: #F5F5F5;
+display: flex;
+justify-content: flex-end;
+padding: 20px;
+cursor: pointer;
+
+}
+
+.productName{
+  color: #4A4A4A;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 21px; 
+margin-top: 20px;
+cursor: pointer;
+
+}
+.productPrice{
+  color: #4A4A4A;
+font-size: 18px;
+font-weight: 400;
+line-height: normal;
+text-transform: uppercase;
+}
+.viewAllBtn{
+  display: flex;
+width: 264px;
+height: 48px;
+padding: 12px 24px;
+justify-content: center;
+align-items: center;
+background-color: #383831;
+color:#FFF;
+text-align: center;
+font-size: 14px;
+font-weight: 400;
+line-height: normal;
+border: none;
+cursor: pointer;
+}
+.viewAllBtnDiv{
+  display: flex;
+  justify-content: center;
+  margin: 90px 0 60px;
+}
+.productosTitle{
+  color: #4A4A4A;
+text-align: center;
+font-size: 32px;
+font-weight: 400;
+}
+.loremDescription{
+  color: #4A4A4A;
+text-align: center;
+font-size: 18px;
+font-weight: 400;
+line-height: 30px; 
+letter-spacing: 0.4px;
+}
+.titlePageDiv{
+  margin: 40px 0 70px;
 }
