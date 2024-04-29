@@ -19,15 +19,14 @@
   font-style: normal;
   font-weight: 600;
   line-height: 18px;
-cursor: pointer;
-
+  cursor: pointer;
 }
 .navbar {
   padding: 16px 24px;
   background-color: #fff;
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #F0EFEB;
+  border-bottom: 1px solid #f0efeb;
 }
 
 .onTopImgH1 {
@@ -53,6 +52,10 @@ cursor: pointer;
 }
 .productsSection {
   padding: 0 90px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .category {
   padding: 60px 30px;
@@ -66,8 +69,7 @@ cursor: pointer;
   font-weight: 400;
   line-height: normal;
   text-decoration-line: underline;
-cursor: pointer;
-
+  cursor: pointer;
 }
 .categoriesDiv {
   display: flex;
@@ -88,7 +90,7 @@ cursor: pointer;
   display: flex;
   flex-direction: row;
   height: 195px;
-  justify-content: center
+  justify-content: center;
 }
 .footerOption {
   background-color: #fff;
@@ -101,83 +103,120 @@ cursor: pointer;
   margin: 80px 10px;
   padding: 10px 10px 15px;
   line-height: normal;
-cursor: pointer;
-
+  cursor: pointer;
 }
-.productArray{
+.productArray {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
-.productContainer{
+.productContainer {
   width: 385px;
-margin: 20px 16.5px;
+  margin: 20px 16.5px;
+  
 
 }
-.productDiv{
+.productDiv {
   width: 385px;
-height: 267px;
-flex-shrink: 0;
-background: #F5F5F5;
-display: flex;
-justify-content: flex-end;
-padding: 20px;
-cursor: pointer;
-
-}
-
-.productName{
-  color: #4A4A4A;
-font-size: 18px;
-font-style: normal;
-font-weight: 700;
-line-height: 21px; 
-margin-top: 20px;
-cursor: pointer;
-
-}
-.productPrice{
-  color: #4A4A4A;
-font-size: 18px;
-font-weight: 400;
-line-height: normal;
-text-transform: uppercase;
-}
-.viewAllBtn{
+  height: 267px;
+  flex-shrink: 0;
+  background: rgb(240 239 235);
   display: flex;
-width: 264px;
-height: 48px;
-padding: 12px 24px;
-justify-content: center;
-align-items: center;
-background-color: #383831;
-color:#FFF;
-text-align: center;
-font-size: 14px;
-font-weight: 400;
-line-height: normal;
-border: none;
-cursor: pointer;
+  justify-content: flex-end;
+  padding: 20px;
+  cursor: pointer;
+  position: relative
 }
-.viewAllBtnDiv{
+
+.productName {
+  color: #4a4a4a;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 21px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.productPrice {
+  color: #4a4a4a;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.viewAllBtn {
+  display: flex;
+  width: 264px;
+  height: 48px;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  background-color: #383831;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  border: none;
+  cursor: pointer;
+}
+.viewAllBtnDiv {
   display: flex;
   justify-content: center;
   margin: 90px 0 60px;
 }
-.productosTitle{
-  color: #4A4A4A;
-text-align: center;
-font-size: 32px;
-font-weight: 400;
+.productosTitle {
+  color: #4a4a4a;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 400;
 }
-.loremDescription{
-  color: #4A4A4A;
-text-align: center;
-font-size: 18px;
-font-weight: 400;
-line-height: 30px; 
-letter-spacing: 0.4px;
+.loremDescription {
+  color: #4a4a4a;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.4px;
 }
-.titlePageDiv{
+.titlePageDiv {
   margin: 40px 0 70px;
+}
+
+.paginationBtn {
+  border: none;
+  color: #000;
+  font-size: 19px;
+  font-weight: 400;
+  background-color: transparent;
+  cursor: pointer;
+}
+.paginationContainer{
+  display: flex;
+  justify-content: center;
+
+}
+.paginationDiv{
+  margin: 164px 0 125px;
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.selectedPage{
+  font-weight: 800;
+}
+.nextBtn{
+  background-color: transparent;
+  border: none;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.backBtn{
+  transform: rotate(180deg);
+  background-color: transparent;
+  border: none;
+  margin-right: 10px;
+  cursor: pointer;
+  margin-bottom: 2px;
 }

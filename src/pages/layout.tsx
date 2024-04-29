@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { useRouter } from 'next/router';
 import Head from 'next/head';
 import "./globals.css";
 import styles from "./page.module.css";
@@ -12,7 +13,6 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  const footerOptions = ["Estancias", "Estilo", "Muebles", "Decoración", "We are Kave", "Proyectos"]
   return (
     <html lang="es">
       <Head>
@@ -97,11 +97,7 @@ export default function RootLayout({
           </div>
         </header>
         {children}
-        <footer className={styles.footerDiv}>
-          {footerOptions.map((option)=>
-          <div className={styles.footerOption} key={option}>{option}</div>
-          )}
-        </footer>
+       
       </body>
     </html>
   );
