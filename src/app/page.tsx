@@ -90,7 +90,7 @@ export default function Home() {
         <div className={styles.productArray}>
           {datos.map((item: any) => (
             <div key={item.productSku} className={styles.productContainer}>
-              {/* <Link href={`/details/${item.productSku}`}> */}
+              <Link href={`/details/${item.productSku}`}>
               <div className={styles.productDiv}>
                 {item.productImageUrl ? (
                   <Image
@@ -161,10 +161,11 @@ export default function Home() {
               </div>
               <h5 className={styles.productName}>{item.productName}</h5>
               <p className={styles.productPrice}>{item.productPrice}€</p>
-              {/* </Link> */}
+              </Link>
             </div>
           ))}
         </div>
+        
         <div className={styles.viewAllBtnDiv}>
 
           <Link href={"/productos"}> 
