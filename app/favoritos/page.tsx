@@ -1,8 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
-import styles from "../../src/app/page.module.css";
+import styles from "../page.module.css";
 import Image from "next/image";
-import Layout from "../app/layout";
+import Layout from "../layout";
+import Link from "next/link";
 
 export default function Favoritos() {
   const [page, setPage] = useState([]);
@@ -89,15 +90,17 @@ export default function Favoritos() {
           {page?.map((item: any) => (
             <div key={item.productSku} className={styles.productContainer}>
               <div className={styles.productDiv}>
-                {item.productImageUrl && (
-                  <Image
-                    objectFit="scale-down"
-                    layout="fill"
-                    src={item.productImageUrl}
-                    alt={"foto de producto"}
-                    className={styles.productImg}
-                  />
-                )}
+                <Link href={`/details/${item.productSku}`}>
+                  {item.productImageUrl && (
+                    <Image
+                      objectFit="scale-down"
+                      layout="fill"
+                      src={item.productImageUrl}
+                      alt="foto de producto"
+                      className={styles.productImg}
+                    />
+                  )}
+                </Link>
 
                 {!favsItems.includes(item.productSku) ? (
                   <svg
@@ -137,8 +140,10 @@ export default function Favoritos() {
                   </svg>
                 )}
               </div>
-              <h5 className={styles.productName}>{item.productName}</h5>
-              <p className={styles.productPrice}>{item.productPrice}€</p>
+              <Link href={`/details/${item.productSku}`}>
+                <h5 className={styles.productName}>{item.productName}</h5>
+                <p className={styles.productPrice}>{item.productPrice}€</p>
+              </Link>
             </div>
           ))}
         </div>
@@ -158,6 +163,7 @@ export default function Favoritos() {
                   />
                 </button>
               )}
+
               {Array.from({ length: endIndex - startIndex }, (_, index) => (
                 <button
                   className={`${styles.paginationBtn} ${
@@ -172,6 +178,7 @@ export default function Favoritos() {
                   {index + startIndex + 1}
                 </button>
               ))}
+
               <button
                 onClick={() => setCurrentPage(currentPage + 1)}
                 disabled={currentPage === totalPages}

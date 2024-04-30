@@ -2,12 +2,11 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import styles from "./page.module.css";
-import kavehome2 from "../../public/kavehome2.png";
+import kavehome2 from "../public/kavehome2.png";
 import Link from "next/link";
 
 export default function Home() {
-  const [favsItems, setFavsItems] = useState<string[]>([]); // ["62137618273618","8w378w7r89w8w7er", "r8we89rw789"]
-
+  const [favsItems, setFavsItems] = useState<string[]>([]); 
   const [datos, setDatos] = useState<any>([]);
   const categories = [
     "We are Kave",
@@ -67,7 +66,7 @@ export default function Home() {
   }, []);
 
   return (
-    <section>
+    <div>
       <div>
         <Image
           src={kavehome2}
@@ -182,6 +181,6 @@ export default function Home() {
           </div>
         ))}
       </footer>
-    </section>
+    </div>
   );
 }
