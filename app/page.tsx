@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import styles from "./page.module.css";
 import kavehome2 from "../public/kavehome2.png";
+import kavehome3 from "../public/kavehome3.png";
 import Link from "next/link";
 
 export default function Home() {
@@ -69,8 +70,16 @@ export default function Home() {
     <div>
       <div>
         <Image
+        className={styles.bigScreen}
           src={kavehome2}
           alt={"kavehome2"}
+          objectFit="cover"
+          layout="responsive"
+        />
+         <Image
+        className={styles.smallScreen}
+          src={kavehome3}
+          alt={"kavehome3"}
           objectFit="cover"
           layout="responsive"
         />

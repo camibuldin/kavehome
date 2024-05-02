@@ -7,7 +7,6 @@ import styles from "../../app/page.module.css"
 import dynamic from "next/dynamic";
 
 const ProductDetails=()=> {
-  const [isClient, setIsClient] = useState(false);
   const router = useRouter();
   const [product, setProduct] = useState<any>();
 
@@ -34,9 +33,6 @@ const ProductDetails=()=> {
     fetchData();
   }, [router.isReady, router.query.id]);
 
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
 
   return (
     <Layout>
@@ -44,11 +40,10 @@ const ProductDetails=()=> {
         <div className={styles.imgDetailsDiv}>
           {product?.productImageUrl && 
            <Image
-           objectFit="scale-down"
-           width={700}
-           height={710}
+           fill
            src={product.productImageUrl}
            alt={"foto de producto"}
+           className={styles.productImgDetails}
          />
          }
         </div>
