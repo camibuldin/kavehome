@@ -1,12 +1,12 @@
 "use client";
 import { useRouter } from "next/router";
 import Layout from "../../app/layout";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { useEffect, useState } from "react";
-import styles from "../../app/page.module.css"
+import styles from "../../app/page.module.css";
 import dynamic from "next/dynamic";
 
-const ProductDetails=()=> {
+const ProductDetails = () => {
   const router = useRouter();
   const [product, setProduct] = useState<any>();
 
@@ -33,28 +33,32 @@ const ProductDetails=()=> {
     fetchData();
   }, [router.isReady, router.query.id]);
 
-
   return (
     <Layout>
       <div className={styles.detailsContainer}>
         <div className={styles.imgDetailsDiv}>
-          {product?.productImageUrl && 
-           <Image
-           fill
-           src={product.productImageUrl}
-           alt={"foto de producto"}
-           className={styles.productImgDetails}
-         />
-         }
+          {product?.productImageUrl && (
+            <Image
+              src={product.productImageUrl}
+              alt={"foto de producto"}
+              className={styles.productImgDetails}
+              objectFit="cover"
+              objectPosition="center bottom"
+              width={500}
+              height={800}
+            />
+          )}
         </div>
         <div className={styles.productDetailsDiv}>
           <h3>{product?.productCollection}</h3>
-          <p className={styles.categoryDetails}>{product?.productCategoryHierarchy}</p>
+          <p className={styles.categoryDetails}>
+            {product?.productCategoryHierarchy}
+          </p>
           <p className={styles.priceDetails}>{product?.productPrice}</p>
-          <p >{product?.productName}</p>
+          <p>{product?.productName}</p>
         </div>
       </div>
     </Layout>
   );
-}
-export default dynamic (() => Promise.resolve(ProductDetails), {ssr: false})
+};
+export default dynamic(() => Promise.resolve(ProductDetails), { ssr: false });

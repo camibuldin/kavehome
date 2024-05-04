@@ -22,7 +22,7 @@
   cursor: pointer;
 }
 .navbar {
-  padding: 16px 24px;
+  padding: 16px 24px 5px;
   background-color: #fff;
   display: flex;
   justify-content: space-between;
@@ -36,8 +36,7 @@
   font-style: normal;
   font-weight: 400;
   position: absolute;
-  top: 74%;
-  left: 44%;
+  bottom: 60px;
 }
 .onTopImgH3 {
   color: #fff;
@@ -47,11 +46,10 @@
   letter-spacing: 2.4px;
   text-transform: uppercase;
   position: absolute;
-  top: 72%;
-  left: 44%;
+  bottom: 100px;
 }
 .productsSection {
-  padding: 0 90px;
+  padding: 0 40px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -59,7 +57,7 @@
 }
 .category {
   padding: 60px 30px;
-  width: 180.725px;
+  min-width: 180px;
   height: 136px;
   background-color: #f5f5f5;
   margin: 0 15px;
@@ -83,7 +81,7 @@
   font-size: 48px;
   font-weight: 400;
   line-height: normal;
-  margin: 60px 0 45px;
+  margin: 60px 500px 45px;
 }
 .footerDiv {
   background-color: #f2f2f2;
@@ -91,6 +89,7 @@
   flex-direction: row;
   height: 195px;
   justify-content: center;
+  margin-bottom: 127px;
 }
 .footerOption {
   background-color: #fff;
@@ -100,10 +99,11 @@
   font-weight: 400;
   height: 30px;
   text-decoration-line: underline;
-  margin: 80px 10px;
-  padding: 10px 10px 15px;
   line-height: normal;
   cursor: pointer;
+  padding: 5px 15px 0;
+  align-items: center;
+  margin: auto 10px;
 }
 .productArray {
   display: flex;
@@ -116,18 +116,15 @@
   margin: 20px 16.5px;
 }
 .productDiv {
-  width: 385px;
   height: 267px;
-  flex-shrink: 0;
+  width: 385px;
   background: rgb(240 239 235);
   display: flex;
   justify-content: flex-end;
-  padding: 20px;
   cursor: pointer;
-  position: relative;
   overflow: hidden;
+  position: relative;
 }
-
 .productName {
   color: #4a4a4a;
   font-size: 18px;
@@ -155,10 +152,13 @@
   color: #fff;
   text-align: center;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: lighter;
   line-height: normal;
   border: none;
   cursor: pointer;
+}
+.viewAllBtn:hover {
+  background-color: #6c6c65;
 }
 .viewAllBtnDiv {
   display: flex;
@@ -222,29 +222,29 @@
 .detailsContainer {
   display: flex;
   flex-direction: row;
-  width: 85%;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  width: 100%;
 }
 .imgDetailsDiv {
-  height: 700px;
-  width: 1000px;
+  width: 850px;
+  overflow: hidden;
+  background-color: #f0efea;
   display: flex;
-  position: relative;
+  justify-content: center;
 }
-.productImgDetails{
-  margin-left: -70px;
-}
-.productImg{
-  width: 100%; /* Asegúrate de que la imagen cubra todo el contenedor */
+
+.productImg {
   height: 100%;
-  transition: transform 0.5s ease; 
+  transition: transform 0.5s ease;
 }
-.productImg:hover{
+.productImg:hover {
   transform: scale(1.2);
 }
 .productDetailsDiv {
   width: 460px;
-  margin-top: 45px;
+  padding-top: 45px;
+  margin-right: 100px;
+  margin-left: 40px;
 }
 .productDetailsDiv h3 {
   font-size: 36px;
@@ -261,28 +261,47 @@
 .bigScreen {
   display: inline;
 }
-.smallScreen {
-  display: none;
+.homePageText {
+  background: url("https://s3-alpha-sig.figma.com/img/2f6c/a58a/ed9fb5b0ba663edb534682f404ef8e5d?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=WXA1sTJ7Q5n9gbsaQaxPL-0B5MMkluvsWPZdn8xSAnZMiQ2wzPdEVxhsMZLa-zW912vsszoP2c2nXRGKLL5kktRrxx-CJdP81B-7Fz1-EuH5TLk24gIGAjvcNh9WOwO6tgrF61mLOoGLp-D9aAIytrZheFtxYIs5C96g1jFHdBrysczMpOooYG2Bkj4SxMYJ8kjZdLY1P75hnL6kQV5wyCSwhZN3hrSWKpN7YYwV9xxiJJdch~syxzlx2Uu~mToSWjxTW6XOLpjunNUXPgar6Uoi6RfQ-~xFp2iwZRjps4UxGlnxee9kOX8t2GEIjq9tgY0Q562QYsHJ7zhYW1jhmQ__")
+    lightgray 50%;
+  background-size: cover; /* Cubre todo el área disponible */
+  background-position: center; /* Centra la imagen en el contenedor */
+  background-repeat: no-repeat;
+  height: 775px;
+  display: flex;
+  justify-content: center;
 }
-@media (max-width: 768px) {
-  .smallScreen {
-    display: inline;
-  }
-  .bigScreen {
-    display: none;
-  }
-  .onTopImgH1 {
-    top: 90%;
-    left: 35%;
-  }
-  .onTopImgH3 {
-    top: 88%;
+.homePageContainer {
+  display: flex;
+  flex-direction: column;
+}
+.favBtn {
+  padding: 20px 20px 0 0;
+}
+.svgDiv {
+  margin-right: 30px;
+  margin-top: 20px;
+}
 
-    left: 35%;
+@media (max-width: 768px) {
+  .homePageText {
+    background: url("https://s3-alpha-sig.figma.com/img/8f7d/95ad/0f0f7f864fc3c4a2106607304f38508f?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=C-PNmJFzW6c7PiXGSi-lTIQx1Krx25PDi0iAAXae~212PaKbYJvlO9uUTsrZYayTCz2upFDXAV68JOmJ6AO1m1adaZl9lUFDIeEsdg1Lbsd0U6stT4XfA8vSvyCqyV2fBWc0BmF8lD0nAuLBygGspaySYSzLCY6SPoQmiSqXDr2SGbR6CvoKcC4bxh4FyKSsAFlaIASVA21SK9sLMl-Rmo21nbZra2j9iYErfCW5qat~rKjwyexyzzFe3F3fdvOxROEx56loWrc62rv~SboJ30lqdrj6vOB2WFZGS6N7Ashu45ztvjGJcH05hF2GO9u~COtNGm1e0Z6a38NrBWaNXg__")
+      lightgray 50% / cover no-repeat;
+    background-size: cover; /* Cubre todo el área disponible */
+    background-position: center; /* Centra la imagen en el contenedor */
+    background-repeat: no-repeat;
+    height: 600px;
+  }
+  .favBtn {
+    padding: 10px 10px 0 0;
+  }
+
+  .category {
+    min-width: 198px;
   }
   .categoriesDiv {
     overflow-x: scroll;
-    padding: 5px;
+    margin-top: 45px;
   }
   .productsSection {
     padding: 0;

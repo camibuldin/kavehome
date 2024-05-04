@@ -3,7 +3,10 @@ const nextConfig = {
   reactStrictMode: true,
 
   images: {
-    domains: ["c.media.kavehome.com", "d.media.kavehome.com"],
+    remotePatterns: [
+      { protocol: 'https', hostname: 'c.media.kavehome.com' },
+      { protocol: 'https', hostname: 'd.media.kavehome.com' }
+    ],
   },
 };
 
