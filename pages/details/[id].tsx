@@ -36,25 +36,22 @@ const ProductDetails = () => {
   return (
     <Layout>
       <div className={styles.detailsContainer}>
-        <div className={styles.imgDetailsDiv}>
-          {product?.productImageUrl && (
-            <Image
-              src={product.productImageUrl}
-              alt={"foto de producto"}
-              className={styles.productImgDetails}
-              objectFit="cover"
-              objectPosition="center bottom"
-              width={500}
-              height={800}
-            />
-          )}
+        <div className={styles.imgDetailsDivDetails}>
+          <Image
+            src={product?.productImageUrl}
+            alt={"foto de producto"}
+            className={styles.productImgDetails}
+            objectFit="scale-down"
+            objectPosition="center bottom"
+            layout="fill"
+          />
         </div>
         <div className={styles.productDetailsDiv}>
           <h3>{product?.productCollection}</h3>
           <p className={styles.categoryDetails}>
             {product?.productCategoryHierarchy}
           </p>
-          <p className={styles.priceDetails}>{product?.productPrice}</p>
+          <p className={styles.priceDetails}>{product?.productPrice}€</p>
           <p>{product?.productName}</p>
         </div>
       </div>
