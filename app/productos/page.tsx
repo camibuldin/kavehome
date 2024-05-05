@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
 import Image from "next/legacy/image";
-import Layout from "../layout";
 import styles from "../page.module.css";
 import Link from "next/link";
 
@@ -14,7 +13,7 @@ export default function Productos() {
   const startIndex = Math.max(currentPage - 4, 0);
   const endIndex = Math.min(startIndex + 8, totalPages);
 
-  function getPaginatedData(data: any[], maxItems: number = 21) {
+  function getPaginatedData(data: any[], maxItems:number= 21) {
     let paginatedData = [];
     for (let i = 0; i < data.length; i += maxItems) {
       let grupo = data.slice(i, i + maxItems);

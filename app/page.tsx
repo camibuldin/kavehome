@@ -35,7 +35,6 @@ export default function Home() {
   function addToFavs(item: string) {
     const arrayUtil = [...favsItems];
     arrayUtil.push(item);
-    console.log("favs", favsItems);
 
     setFavsItems(arrayUtil);
 
@@ -56,7 +55,6 @@ export default function Home() {
         if (favs) {
           setFavsItems(JSON.parse(favs));
         }
-        console.log(data.results);
         setDatos(data.results.slice(0, 13));
       } catch (error) {
         console.error(error);

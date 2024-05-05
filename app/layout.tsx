@@ -1,18 +1,15 @@
 "use client";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import Head from "next/head";
 import "./globals.css";
 import styles from "./page.module.css";
 import Link from "next/link";
-import { useEffect } from "react";
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   const pathname = usePathname();
-useEffect(()=>{
-  console.log('pathname', pathname)
-},[])
+
   return (
     <html lang="es">
       <Head>

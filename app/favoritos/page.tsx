@@ -2,12 +2,11 @@
 import { useEffect, useState } from "react";
 import styles from "../page.module.css";
 import Image from "next/legacy/image";
-import Layout from "../layout";
 import Link from "next/link";
 
 export default function Favoritos() {
   const [page, setPage] = useState([]);
-  const [favsItems, setFavsItems] = useState<string[]>([]); // ["62137618273618","8w378w7r89w8w7er", "r8we89rw789"]
+  const [favsItems, setFavsItems] = useState<string[]>([]); 
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const [paginatedData, setPaginatedData] = useState<any>([]);
@@ -34,7 +33,6 @@ export default function Favoritos() {
   function addToFavs(item: string) {
     const arrayUtil = [...favsItems];
     arrayUtil.push(item);
-    console.log("favs", favsItems);
 
     setFavsItems(arrayUtil);
 
@@ -51,7 +49,6 @@ export default function Favoritos() {
           throw new Error("No se pudo obtener la respuesta de la red");
         }
         const data = await response.json();
-
         const favs = localStorage.getItem("favoriteList");
         if (favs) {
           setFavsItems(JSON.parse(favs));

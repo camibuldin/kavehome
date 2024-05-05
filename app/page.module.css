@@ -246,7 +246,7 @@
   background-color: #f0efea;
   display: flex;
   justify-content: center;
-  height: 800px;
+  height: 750px;
   position: relative;
 }
 .productImg {
@@ -307,7 +307,17 @@
 .bigScreen{
   display:flex
 }
+.backPageBtn{
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    cursor: pointer;
+}
 @media (max-width: 768px) {
+
+  .backPageBtn{
+    bottom: 100px;
+  }
   .bigScreen{
     display: none;
   }
@@ -333,6 +343,7 @@
   }
   .inspirateTitle {
     font-size: 24px;
+    margin-bottom: 10px;
   }
   .productContainer {
     width: 333px;
@@ -365,13 +376,14 @@
     top: 560px;
   }
   .imgDetailsDivDetails {
-  width: 385px;
-  height: 600px;
+  width: 100%;
+  height: 500px;
   }
   .productDetailsDiv{
     max-width: 323px;
     margin-bottom: 50px;
     padding-top: 20px;
+    margin-left: 35px;
   }
   .favBtn svg{
     position: absolute;
