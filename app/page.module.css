@@ -2,8 +2,9 @@
 
 .body {
   font-family: "Poppins", "sans-serif";
-  background-color: #fff;
+  background-color: #fff ;
 }
+
 .banner {
   display: flex;
   min-width: 360px;
@@ -55,6 +56,13 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+.productGrid{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-left: 55px;
+
+}
 .category {
   padding: 60px 30px;
   min-width: 180px;
@@ -87,9 +95,8 @@
   background-color: #f2f2f2;
   display: flex;
   flex-direction: row;
-  height: 195px;
+  padding: 80px 0;
   justify-content: center;
-  margin-bottom: 127px;
 }
 .footerOption {
   background-color: #fff;
@@ -190,6 +197,7 @@
   font-weight: 400;
   background-color: transparent;
   cursor: pointer;
+  margin: 0 4px;
 }
 .paginationContainer {
   display: flex;
@@ -197,7 +205,7 @@
 }
 .paginationDiv {
   margin: 164px 0 125px;
-  width: 250px;
+  max-width: 250px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -270,12 +278,10 @@
   display: inline;
 }
 .homePageText {
-  background: url("https://s3-alpha-sig.figma.com/img/2f6c/a58a/ed9fb5b0ba663edb534682f404ef8e5d?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=WXA1sTJ7Q5n9gbsaQaxPL-0B5MMkluvsWPZdn8xSAnZMiQ2wzPdEVxhsMZLa-zW912vsszoP2c2nXRGKLL5kktRrxx-CJdP81B-7Fz1-EuH5TLk24gIGAjvcNh9WOwO6tgrF61mLOoGLp-D9aAIytrZheFtxYIs5C96g1jFHdBrysczMpOooYG2Bkj4SxMYJ8kjZdLY1P75hnL6kQV5wyCSwhZN3hrSWKpN7YYwV9xxiJJdch~syxzlx2Uu~mToSWjxTW6XOLpjunNUXPgar6Uoi6RfQ-~xFp2iwZRjps4UxGlnxee9kOX8t2GEIjq9tgY0Q562QYsHJ7zhYW1jhmQ__")
-    lightgray 50%;
-  background-size: cover; /* Cubre todo el área disponible */
-  background-position: center; /* Centra la imagen en el contenedor */
+  background-position: center; 
   background-repeat: no-repeat;
-  height: 775px;
+  height: 760px;
+  width: 100%;
   display: flex;
   justify-content: center;
 }
@@ -295,18 +301,25 @@
   margin-top: 100px;
   height: 500px;
 }
+.smallScreen{
+  display: none;
+}
+.bigScreen{
+  display:flex
+}
 @media (max-width: 768px) {
+  .bigScreen{
+    display: none;
+  }
+  .smallScreen{
+    display: flex;
+  }
   .homePageText {
-    background: url("https://s3-alpha-sig.figma.com/img/8f7d/95ad/0f0f7f864fc3c4a2106607304f38508f?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=C-PNmJFzW6c7PiXGSi-lTIQx1Krx25PDi0iAAXae~212PaKbYJvlO9uUTsrZYayTCz2upFDXAV68JOmJ6AO1m1adaZl9lUFDIeEsdg1Lbsd0U6stT4XfA8vSvyCqyV2fBWc0BmF8lD0nAuLBygGspaySYSzLCY6SPoQmiSqXDr2SGbR6CvoKcC4bxh4FyKSsAFlaIASVA21SK9sLMl-Rmo21nbZra2j9iYErfCW5qat~rKjwyexyzzFe3F3fdvOxROEx56loWrc62rv~SboJ30lqdrj6vOB2WFZGS6N7Ashu45ztvjGJcH05hF2GO9u~COtNGm1e0Z6a38NrBWaNXg__")
-      lightgray 50% / cover no-repeat;
-    background-size: cover; /* Cubre todo el área disponible */
-    background-position: center; /* Centra la imagen en el contenedor */
-    background-repeat: no-repeat;
+   
+ 
     height: 600px;
   }
-  /* .favBtn {
-    padding: 10px 10px 0 0;
-  } */
+  
 
   .category {
     min-width: 198px;
@@ -331,6 +344,7 @@
   .footerDiv {
     flex-wrap: wrap;
     align-items: center;
+    padding: 40px 0;
   }
   .footerOption {
     margin: 10px;
@@ -340,7 +354,7 @@
     flex-direction: column;
   }
   .imgDetailsDiv {
-    width: 100vw;
+    width: 200px;
   }
   .onTopImgH1 {
     
@@ -351,7 +365,7 @@
     top: 560px;
   }
   .imgDetailsDivDetails {
-  width: 450px;
+  width: 385px;
   height: 600px;
   }
   .productDetailsDiv{
@@ -363,5 +377,12 @@
     position: absolute;
     top: 20px;
     right: 20px;
+  }
+  .productGrid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 0;
+  
   }
 }

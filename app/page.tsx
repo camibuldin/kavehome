@@ -69,6 +69,12 @@ export default function Home() {
   return (
     <div className={styles.homePageContainer}>
       <div className={styles.homePageText}>
+        <div className={styles.bigScreen}>
+          <Image src={kavehome2} objectFit="cover" priority />
+        </div>
+        <div className={styles.smallScreen}>
+          <Image src={kavehome3} objectFit="cover" priority />
+        </div>
         <h3 className={styles.onTopImgH3}>Premium Collection</h3>
         <h1 className={styles.onTopImgH1}>Kavehome</h1>
       </div>
@@ -100,6 +106,7 @@ export default function Home() {
                             width={300}
                             height={250}
                             className={styles.productImg}
+                            priority
                           />
                         </Link>
                       </div>

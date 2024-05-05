@@ -14,8 +14,7 @@ export default function Productos() {
   const startIndex = Math.max(currentPage - 4, 0);
   const endIndex = Math.min(startIndex + 8, totalPages);
 
-  function getPaginatedData(data: any) {
-    const maxItems = 21;
+  function getPaginatedData(data: any[], maxItems: number = 21) {
     let paginatedData = [];
     for (let i = 0; i < data.length; i += maxItems) {
       let grupo = data.slice(i, i + maxItems);
@@ -107,6 +106,7 @@ export default function Productos() {
                             width={300}
                             height={250}
                             className={styles.productImg}
+                            priority
                           />
                         </Link>
                       </div>

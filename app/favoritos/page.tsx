@@ -87,8 +87,10 @@ export default function Favoritos() {
           <p className={styles.loremDescription}>Lorem ipsum dolor sit amet.</p>
         </div>
         <div className={styles.productsSection}>
+          <div className={styles.productGrid}>
+
           {page?.map((item: any) => (
-            item.productImageUrl && (
+            
               <>
                 <div
                   key={item.productSku}
@@ -104,6 +106,7 @@ export default function Favoritos() {
                           width={300}
                           height={250}
                           className={styles.productImg}
+                          priority
                         />
                       </Link>
                     </div>
@@ -155,8 +158,10 @@ export default function Favoritos() {
                   </Link>
                 </div>
               </>
-            )
+            
           ))}
+          </div>
+
         </div>
         <div className={styles.paginationContainer}>
           {totalPages > 1 && (
