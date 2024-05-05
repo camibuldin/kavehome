@@ -108,7 +108,7 @@ export default function RootLayout({
         </header>
 
         {/* Contenido principal con rol main */}
-        <main role="main" aria-label="Contenido principal">
+        <main role="main" aria-label="Contenido principal" className={styles.main}> 
           {children}
         </main>
       </body>

@@ -1,8 +1,5 @@
 # Kave Home - Prueba Técnica
 
-![Kave Home Logo](https://github.com/camibuldin/kavehome/raw/main/public/kavehome-logo.png)
-
-## Introducción
 
 **Kave Home** es un proyecto web de comercio electrónico que ofrece una amplia variedad de productos de muebles y decoración. Este repositorio fue creado como parte de una prueba técnica para demostrar habilidades en desarrollo web y diseño accesible.
 
@@ -11,12 +8,12 @@
 
 El objetivo de esta prueba técnica es **diseñar e implementar el siguiente portal**, siguiendo las directrices proporcionadas por el equipo de UX en Figma.
 
-- **Figma:** [Kave Challenge](https://www.figma.com/file/link-to-figma-design)
+- **Figma:** [Kave Challenge](https://www.figma.com/file/KfDdY1c32OaOTT20GuzvCR/Front-Challenge-2024?type=design&node-id=0-1&mode=design&t=24SXgmGP2BeSDqKB-0)
 
 
 ### Características
 
-- Productos destacados y organizados por categorías.
+- Productos destacados y categorías.
 - Listas de favoritos para los usuarios.
 - Accesibilidad mejorada con etiquetas ARIA.
 - Diseño responsivo y amigable.
@@ -24,10 +21,13 @@ El objetivo de esta prueba técnica es **diseñar e implementar el siguiente por
 ## Capturas de Pantalla
 
 ### Página Principal
-![Página Principal](https://github.com/camibuldin/kavehome/raw/main/public/home-screenshot.png)
+(../kave-challenge/public/homepage.png)
+(../kave-challenge/public/homepage1.png)
+(../kave-challenge/public/homepage2.png)
 
 ### Página de Detalles del Producto
-![Detalles del Producto](https://github.com/camibuldin/kavehome/raw/main/public/product-details-screenshot.png)
+(../kave-challenge/public/detailspage.png)
+(../kave-challenge/public/detailspage1.png)
 
 ### Lista de Favoritos
 ![Lista de Favoritos](https://github.com/camibuldin/kavehome/raw/main/public/favorites-screenshot.png)
@@ -94,10 +94,3 @@ La aplicación incluye etiquetas ARIA para mejorar la accesibilidad y la experie
 - **`productos.tsx`:** Página que muestra todos los productos disponibles.
 - **`details/[id].tsx`:** Página de detalles de un producto específico.
 
-
-```jsx
-<main>
-  <div role="region" aria-label="Lista de productos favoritos">
-    ...
-  </div>
-</main>

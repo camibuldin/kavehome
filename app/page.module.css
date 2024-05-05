@@ -2,10 +2,13 @@
 
 .body {
   font-family: "Poppins", "sans-serif";
-  background-color: #fff ;
+  background-color: #fff;
 }
 
 .banner {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
   display: flex;
   min-width: 360px;
   padding: 11px 16px;
@@ -22,14 +25,19 @@
   cursor: pointer;
 }
 .navbar {
-
+  top: 40px;
+  position: fixed;
+  z-index: 99;
+  width: 100%;
   padding: 16px 24px 5px;
   background-color: #fff;
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #f0efeb;
 }
-
+.main{
+  padding-top: 55px;
+}
 .onTopImgH1 {
   color: #fff;
   text-align: center;
@@ -56,12 +64,11 @@
   flex-wrap: wrap;
   justify-content: center;
 }
-.productGrid{
+.productGrid {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   margin-left: 55px;
-
 }
 .category {
   padding: 60px 30px;
@@ -278,7 +285,7 @@
   display: inline;
 }
 .homePageText {
-  background-position: center; 
+  background-position: center;
   background-repeat: no-repeat;
   height: 760px;
   width: 100%;
@@ -296,40 +303,36 @@
   margin-right: 30px;
   margin-top: 20px;
 }
-.svgDivDetails{
+.svgDivDetails {
   margin-right: 30px;
   margin-top: 100px;
   height: 500px;
 }
-.smallScreen{
+.smallScreen {
   display: none;
 }
-.bigScreen{
-  display:flex
+.bigScreen {
+  display: flex;
 }
-.backPageBtn{
-    position: absolute;
-    top: 100px;
-    left: 20px;
-    cursor: pointer;
+.backPageBtn {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  cursor: pointer;
 }
 @media (max-width: 768px) {
-
-  .backPageBtn{
+  .backPageBtn {
     bottom: 100px;
   }
-  .bigScreen{
+  .bigScreen {
     display: none;
   }
-  .smallScreen{
+  .smallScreen {
     display: flex;
   }
   .homePageText {
-   
- 
     height: 600px;
   }
-  
 
   .category {
     min-width: 198px;
@@ -368,33 +371,30 @@
     width: 200px;
   }
   .onTopImgH1 {
-    
     top: 580px;
   }
   .onTopImgH3 {
-   
     top: 560px;
   }
   .imgDetailsDivDetails {
-  width: 100%;
-  height: 500px;
+    width: 100%;
+    height: 500px;
   }
-  .productDetailsDiv{
+  .productDetailsDiv {
     max-width: 323px;
     margin-bottom: 50px;
     padding-top: 20px;
     margin-left: 35px;
   }
-  .favBtn svg{
+  .favBtn svg {
     position: absolute;
     top: 20px;
     right: 20px;
   }
-  .productGrid{
+  .productGrid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin-left: 0;
-  
   }
 }
