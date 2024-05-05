@@ -21,9 +21,11 @@ El objetivo de esta prueba técnica es **diseñar e implementar el siguiente por
 ## Capturas de Pantalla
 
 ### Página Principal
-![Página Principal](https://github.com/camibuldin/kavehome/blob/main/public/homepage.png)
-![Página Principal](https://github.com/camibuldin/kavehome/blob/main/public/homepage1.png)
-![Página Principal](https://github.com/camibuldin/kavehome/blob/main/public/homepage2.png)
+<div>
+  <img src="https://github.com/camibuldin/kavehome/blob/main/public/homepage.png" alt="Página Principal" width="250px"/>
+  <img src="https://github.com/camibuldin/kavehome/blob/main/public/homepage1.png" alt="Página Principal 1" width="250px"/>
+  <img src="https://github.com/camibuldin/kavehome/blob/main/public/homepage2.png" alt="Página Principal 2" width="250px"/>
+</div>
 
 ### Página de Detalles del Producto
 ![Página de Detalles del Producto](https://github.com/camibuldin/kavehome/blob/main/public/detailspage.png)
