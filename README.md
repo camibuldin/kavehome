@@ -28,12 +28,18 @@ El objetivo de esta prueba técnica es **diseñar e implementar el siguiente por
 </div>
 
 ### Página de Detalles del Producto
-![Página de Detalles del Producto](https://github.com/camibuldin/kavehome/blob/main/public/detailspage.png)
-![Página de Detalles del Producto](https://github.com/camibuldin/kavehome/blob/main/public/detailspage1.png)
+<div>
+  <img src="https://github.com/camibuldin/kavehome/blob/main/public/detailspage.png" alt="Página Principal" width="250px"/>
+  <img src="https://github.com/camibuldin/kavehome/blob/main/public/detailspage1.png" alt="Página Principal 1" width="250px"/>
+</div>
+
 
 ### Lista de Favoritos
-![Lista de Favoritos](https://github.com/camibuldin/kavehome/blob/main/public/favpage.png)
-![Lista de Favoritos](https://github.com/camibuldin/kavehome/blob/main/public/favpage1.png)
+<div>
+  <img src="https://github.com/camibuldin/kavehome/blob/main/public/favpage.png" alt="Página Principal" width="250px"/>
+  <img src="hhttps://github.com/camibuldin/kavehome/blob/main/public/favpage1.png" alt="Página Principal 1" width="250px"/>
+</div>
+
 
 ## Instalación y Configuración
 
@@ -81,7 +87,7 @@ Asegúrate de tener Node.js y npm instalados en tu sistema.
 
 ### Accesibilidad
 
-La aplicación incluye etiquetas ARIA para mejorar la accesibilidad y la experiencia de los usuarios con discapacidades. Ejemplo de etiquetas:
+La aplicación incluye etiquetas ARIA para mejorar la accesibilidad y la experiencia de los usuarios con discapacidades. 
 
 ## Estructura del Proyecto
 
@@ -97,3 +103,5 @@ La aplicación incluye etiquetas ARIA para mejorar la accesibilidad y la experie
 - **`productos.tsx`:** Página que muestra todos los productos disponibles.
 - **`details/[id].tsx`:** Página de detalles de un producto específico.
 
+### Agradecimientos y Reflexión
+Disfruté mucho desarrollando este proyecto para Kave Home. Fue un reto divertido e interesante que me permitió aprender y aplicar nuevas habilidades en Next.js, accesibilidad y diseño responsivo.
