@@ -29,15 +29,15 @@ El objetivo de esta prueba técnica es **diseñar e implementar el siguiente por
 
 ### Página de Detalles del Producto
 <div>
-  <img src="https://github.com/camibuldin/kavehome/blob/main/public/detailspage.png" alt="Página Principal" width="250px"/>
-  <img src="https://github.com/camibuldin/kavehome/blob/main/public/detailspage1.png" alt="Página Principal 1" width="250px"/>
+  <img src="https://github.com/camibuldin/kavehome/blob/main/public/detailspage.png" alt="Página de Detalles del Producto" width="250px"/>
+  <img src="https://github.com/camibuldin/kavehome/blob/main/public/detailspage1.png" alt="Página de Detalles del Producto 1" width="250px"/>
 </div>
 
 
 ### Lista de Favoritos
 <div>
-  <img src="https://github.com/camibuldin/kavehome/blob/main/public/favpage.png" alt="Página Principal" width="250px"/>
-  <img src="hhttps://github.com/camibuldin/kavehome/blob/main/public/favpage1.png" alt="Página Principal 1" width="250px"/>
+  <img src="https://github.com/camibuldin/kavehome/blob/main/public/favpage.png" alt="Lista de Favoritos" width="250px"/>
+  <img src="https://github.com/camibuldin/kavehome/blob/main/public/favpage1.png" alt="Lista de Favoritos 1" width="250px"/>
 </div>
 
 
