@@ -1,36 +1,103 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Kave Home - Prueba Técnica
 
-## Getting Started
+![Kave Home Logo](https://github.com/camibuldin/kavehome/raw/main/public/kavehome-logo.png)
 
-First, run the development server:
+## Introducción
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**Kave Home** es un proyecto web de comercio electrónico que ofrece una amplia variedad de productos de muebles y decoración. Este repositorio fue creado como parte de una prueba técnica para demostrar habilidades en desarrollo web y diseño accesible.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Objetivo
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+El objetivo de esta prueba técnica es **diseñar e implementar el siguiente portal**, siguiendo las directrices proporcionadas por el equipo de UX en Figma.
 
-## Learn More
+- **Figma:** [Kave Challenge](https://www.figma.com/file/link-to-figma-design)
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Características
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Productos destacados y organizados por categorías.
+- Listas de favoritos para los usuarios.
+- Accesibilidad mejorada con etiquetas ARIA.
+- Diseño responsivo y amigable.
 
-## Deploy on Vercel
+## Capturas de Pantalla
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Página Principal
+![Página Principal](https://github.com/camibuldin/kavehome/raw/main/public/home-screenshot.png)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Página de Detalles del Producto
+![Detalles del Producto](https://github.com/camibuldin/kavehome/raw/main/public/product-details-screenshot.png)
+
+### Lista de Favoritos
+![Lista de Favoritos](https://github.com/camibuldin/kavehome/raw/main/public/favorites-screenshot.png)
+
+## Instalación y Configuración
+
+### Prerrequisitos
+
+Asegúrate de tener Node.js y npm instalados en tu sistema.
+
+- [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/)
+
+### Instrucciones
+
+1. Clona el repositorio:
+
+    ```bash
+    git clone https://github.com/camibuldin/kavehome.git
+    ```
+
+2. Navega al directorio del proyecto:
+
+    ```bash
+    cd kavehome
+    ```
+
+3. Instala las dependencias:
+
+    ```bash
+    npm install
+    ```
+
+4. Inicia el servidor de desarrollo:
+
+    ```bash
+    npm run dev
+    ```
+
+5. Abre el navegador en [http://localhost:3000](http://localhost:3000) para ver la aplicación.
+
+## Uso
+
+### Lista de Favoritos
+
+- Para añadir un producto a la lista de favoritos, haz clic en el icono del corazón en la tarjeta del producto.
+- Para eliminar un producto de la lista de favoritos, haz clic de nuevo en el icono del corazón.
+
+### Accesibilidad
+
+La aplicación incluye etiquetas ARIA para mejorar la accesibilidad y la experiencia de los usuarios con discapacidades. Ejemplo de etiquetas:
+
+## Estructura del Proyecto
+
+- **`/app`:** Contiene los componentes principales del proyecto.
+- **`/public`:** Archivos públicos como imágenes y estilos.
+- **`/styles`:** Archivos de estilos CSS y módulos.
+
+### Principales Componentes
+
+- **`layout.tsx`:** Componente de diseño global que incluye el encabezado y pie de página.
+- **`page.tsx`:** Página principal que muestra los productos destacados.
+- **`favoritos.tsx`:** Lista de productos favoritos del usuario.
+- **`productos.tsx`:** Página que muestra todos los productos disponibles.
+- **`details/[id].tsx`:** Página de detalles de un producto específico.
+
+
+```jsx
+<main>
+  <div role="region" aria-label="Lista de productos favoritos">
+    ...
+  </div>
+</main>
