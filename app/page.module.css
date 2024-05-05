@@ -15,7 +15,6 @@
   background-color: #383831;
   overflow: hidden;
   color: #fff;
-  text-overflow: ellipsis;
   font-size: 12px;
   font-style: normal;
   font-weight: 600;
@@ -23,6 +22,7 @@
   cursor: pointer;
 }
 .navbar {
+
   padding: 16px 24px 5px;
   background-color: #fff;
   display: flex;

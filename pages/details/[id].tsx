@@ -35,12 +35,22 @@ const ProductDetails = () => {
 
   return (
     <Layout>
-      <div className={styles.detailsContainer}>
-        <div className={styles.imgDetailsDivDetails}>
+      {/* Contenedor principal de los detalles del producto */}
+      <div
+        className={styles.detailsContainer}
+        role="region"
+        aria-label="Detalles del producto"
+      >
+        {/* Imagen del producto */}
+        <div
+          className={styles.imgDetailsDivDetails}
+          role="img"
+          aria-label={`Imagen del producto ${product?.productName}`}
+        >
           {product?.productImageUrl ? (
             <Image
-              src={product?.productImageUrl}
-              alt={"foto de producto"}
+              src={product.productImageUrl}
+              alt={`Imagen del producto ${product.productName}`}
               className={styles.productImgDetails}
               objectFit="scale-down"
               objectPosition="center bottom"
@@ -51,24 +61,33 @@ const ProductDetails = () => {
             ""
           )}
         </div>
-        <div className={styles.productDetailsDiv}>
+
+        {/* Detalles del producto */}
+        <div
+          className={styles.productDetailsDiv}
+          role="complementary"
+          aria-label="Información del producto"
+        >
           <h3>{product?.productCollection}</h3>
           <p className={styles.categoryDetails}>
             {product?.productCategoryHierarchy}
           </p>
           {product?.productPrice && (
-            <p className={styles.priceDetails}>{product?.productPrice}€</p>
-          )}{" "}
+            <p className={styles.priceDetails}>{product.productPrice}€</p>
+          )}
           <p>{product?.productName}</p>
         </div>
+
+        {/* Botón para volver atrás */}
         <div className={styles.backPageBtn}>
           <svg
-          onClick={()=>router.back()}
+            onClick={() => router.back()}
             width="45px"
             height="45px"
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            aria-label="Volver a la página anterior"
           >
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g
@@ -77,14 +96,13 @@ const ProductDetails = () => {
               stroke-linejoin="round"
             ></g>
             <g id="SVGRepo_iconCarrier">
-              {" "}
               <path
                 d="M4 12H20M4 12L8 8M4 12L8 16"
                 stroke="#000000"
                 stroke-width="1.32"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-              ></path>{" "}
+              ></path>
             </g>
           </svg>
         </div>
@@ -92,4 +110,5 @@ const ProductDetails = () => {
     </Layout>
   );
 };
+
 export default dynamic(() => Promise.resolve(ProductDetails), { ssr: false });

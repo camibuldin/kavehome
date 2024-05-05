@@ -20,8 +20,12 @@ export default function RootLayout({
         />
       </Head>
       <body className={styles.body}>
-        <header>
-          <div className={styles.banner}>
+        {/* Cabecera con rol banner */}
+        <header role="banner">
+          <div
+            className={styles.banner}
+            aria-label="Descubre la nueva colección de exterior"
+          >
             <p>Discover the new Outdoor collection</p>
             <svg
               width="16"
@@ -29,6 +33,7 @@ export default function RootLayout({
               viewBox="0 0 16 16"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
             >
               <g id="icon">
                 <path
@@ -40,7 +45,13 @@ export default function RootLayout({
               </g>
             </svg>
           </div>
-          <div className={styles.navbar}>
+
+          {/* Barra de navegación con rol navigation */}
+          <nav
+            className={styles.navbar}
+            role="navigation"
+            aria-label="Navegación principal"
+          >
             <Link href={"/"}>
               <svg
                 width="146"
@@ -48,6 +59,7 @@ export default function RootLayout({
                 viewBox="0 0 146 20"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                aria-label="Logotipo de Kave Home"
               >
                 <g id="Logotype">
                   <path
@@ -58,7 +70,9 @@ export default function RootLayout({
                 </g>
               </svg>
             </Link>
-            <Link href={"/favoritos"}>
+
+            {/* Enlace a favoritos */}
+            <Link href={"/favoritos"} aria-label="Ir a Favoritos">
               {pathname === "/favoritos" ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -90,9 +104,13 @@ export default function RootLayout({
                 </svg>
               )}
             </Link>
-          </div>
+          </nav>
         </header>
-        {children}
+
+        {/* Contenido principal con rol main */}
+        <main role="main" aria-label="Contenido principal">
+          {children}
+        </main>
       </body>
     </html>
   );
